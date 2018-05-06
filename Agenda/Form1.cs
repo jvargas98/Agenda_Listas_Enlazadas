@@ -112,5 +112,15 @@ namespace Agenda
         {
             agenda.EliminarUltimo();
         }
+
+        private void btnReporteInverso_Click(object sender, EventArgs e)
+        {
+            txtListado.Text = agenda.ReporteInverso();
+        }
+
+        private void btnInvertirListas_Click(object sender, EventArgs e)
+        {
+            agenda.InvertirLista();
+        }
     }
 }

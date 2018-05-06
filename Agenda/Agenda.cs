@@ -132,5 +132,47 @@ namespace Agenda
             aux = inicio.Siguente;
             inicio = aux;
         }
+
+        public string ReporteInverso()
+        {
+            string cadena ="";
+            Contacto aux, limite, anterior = null;
+            limite = ultimo;
+            aux = inicio;
+            for (int i = 0; i < totalContactos; i++)
+            {
+                aux = inicio;
+                while (aux != limite)
+                {
+                    anterior = aux;
+                    aux = aux.Siguente;
+                }
+                limite = anterior;
+                cadena += aux;
+            }
+            return cadena;
+        }
+
+        public void InvertirLista()
+        {
+            Contacto aux, limite, anterior = null;
+            limite = ultimo;
+            aux = inicio;
+            for (int i = 0; i < totalContactos; i++)
+            {
+                aux = inicio;
+                while (aux != limite)
+                {
+                    anterior = aux;
+                    aux = aux.Siguente;
+                }
+                limite = anterior;
+                aux.Siguente = anterior;
+                anterior = null;
+            }
+            aux = inicio;
+            inicio = ultimo;
+            ultimo = aux;
+        }
     }
 }

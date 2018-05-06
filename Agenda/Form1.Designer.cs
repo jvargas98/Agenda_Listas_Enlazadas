@@ -253,6 +253,7 @@
             this.btnInvertirListas.TabIndex = 23;
             this.btnInvertirListas.Text = "Invertir L";
             this.btnInvertirListas.UseVisualStyleBackColor = true;
+            this.btnInvertirListas.Click += new System.EventHandler(this.btnInvertirListas_Click);
             // 
             // btnReporteInverso
             // 
@@ -262,6 +263,7 @@
             this.btnReporteInverso.TabIndex = 22;
             this.btnReporteInverso.Text = "Reporte I";
             this.btnReporteInverso.UseVisualStyleBackColor = true;
+            this.btnReporteInverso.Click += new System.EventHandler(this.btnReporteInverso_Click);
             // 
             // Form1
             // 
